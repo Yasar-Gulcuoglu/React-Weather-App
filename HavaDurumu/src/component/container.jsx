@@ -10,7 +10,7 @@ export default function Container() {
   const [min_sicaklik,setmin_Sicaklik] = useState("")
   const [max_sicaklik,setmax_Sicaklik] = useState("")
   const deneme = ()=>{
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${ref.current.value}&appid=bde08fb59420673f92f354fc2039d962&lang=tr&units=metric`).then((response) => {
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${ref.current.value}&appid={Put-Your-Api-Key-Here}&lang=tr&units=metric`).then((response) => {
       setSehir("Şehir: "+response.data.name);
       setHava("Hava: "+response.data.weather[0].description);
       setSicaklik("Sıcaklık: "+response.data.main.temp+" *C");
